@@ -1,0 +1,376 @@
+
+body {
+    /* background: linear-gradient(90deg, rgb(242, 246, 247) 0%, rgb(193, 204, 221) 100%);  */
+    /* background: linear-gradient(225deg, hsla(39, 27%, 90%, 1) 0%, hsla(208, 71%, 89%, 1) 100%); */
+    background: white;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    font-family: "IBM Plex Sans";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 36px;
+    padding: 0;
+    margin: 0;
+}
+
+
+h1 {
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 72px;
+    
+}
+h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 56px;
+    
+}
+
+h1, h2 {
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px rgb(65, 64, 115);
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h4 {
+    text-transform: uppercase;
+}
+
+div {
+    text-align: center;
+}
+
+.section {
+    height: 100vh;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Header  */
+
+header {
+    position: relative;
+    top: 0 ;
+    left: 0;
+    width: 100vw;
+    background: linear-gradient(90deg, rgb(234, 242, 251) 0%, rgb(193, 204, 221) 100%); 
+    padding: 5px;
+    z-index: 1000;
+    margin: 0
+  }
+  
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    justify-content: flex-end;
+    margin: 5px 50px 5px 0px;
+}
+
+nav ul li button {
+    background: none;
+    border: none;
+    color: rgb(65, 64, 115);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+nav ul li button:hover {
+text-decoration: underline;
+}
+
+/* Footer  */
+
+footer {
+    position: relative;
+    bottom: 0 ;
+    left: 0;
+    width: 100vw;
+    background: linear-gradient(90deg, rgb(234, 242, 251) 0%, rgb(193, 204, 221) 100%); 
+    padding: 5px;
+    margin: 0
+
+}
+/* Title page */
+.my-name {
+    text-align: left;
+    text-shadow: 3px 1px 3px rgb(193, 204, 221);
+    color: rgb(76, 57, 87);
+}
+
+.title-description {
+    text-align: left;
+}
+
+/* About Me page */
+.about-me-container {
+    display: flex;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-20px); /* Slightly move down */
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    margin-bottom: 100px;
+}
+
+.about-me-container.fade-in {
+    opacity: 1; /* Fade-in */
+    transform: translateY(0); /* Move to original position */
+}
+
+.about-me-image {
+    flex-basis: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+.about-me-header {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    flex-basis: 50%;
+    text-shadow: 1px 1px 3px rgb(193, 204, 221);
+    font-weight: 600;
+    line-height: 56px;
+}
+
+
+
+.about-me-text {
+    flex-basis: 50%;
+    margin-left: 15px;
+    text-align: left;
+    color: rgb(65, 64, 115);
+}
+
+
+.about-me-text h4 {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.about-me-text p {
+    margin-top: 10px;
+}
+
+/* Projects page */
+
+.projects {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header  */
+.projects-columns {
+    display: block;
+    gap: 20px;
+}
+
+.project-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 35px 0;
+    background: linear-gradient(90deg, rgb(234, 242, 251) 0%, rgb(193, 204, 221) 100%); 
+    border-radius: 5px;
+}
+
+.project-image {
+    flex-basis: 50%;
+    opacity: 0; 
+    transform: translateX(-100px); 
+    transition: opacity 2s ease, transform 1.5s ease;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.project-image.fade-in {
+    opacity: 1; 
+    transform: translateX(0px); 
+}
+
+.project-text h4 {
+    margin-bottom: 0s;
+}
+
+.project-text h4, 
+.project-text p {
+    margin-right: 20px;
+}
+
+.project-text {
+    opacity: 0; 
+    transform: translateX(100px); 
+    transition: opacity 2s ease, transform 1.5s ease;
+    text-align: left;
+    flex-basis: 50%;
+}
+
+.project-text.fade-in {
+    opacity: 1; 
+    transform: translateX(0px); 
+}
+
+.project-github-link {
+    margin-right: 15px;
+    color: rgb(65, 64, 115);
+    transition: transform 0.3s ease;
+}
+
+.project-github-link:hover {
+    transform: scale(1.2);
+}
+
+.project-image-description {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.499);
+    line-height: 12px;
+}
+
+.project-photo-description {
+    display: flex;
+    flex-direction: column ;
+}
+
+.project-tools-line {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.project-tool-box {
+    background-color: rgb(76, 57, 87);
+    color: white;
+    margin: 0px 0px 8px 0px ;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 5px;
+    line-height: 14px;
+
+}
+
+/* Skills page */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    gap: 20px;
+}
+
+.skill {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(65, 101, 138)
+}
+
+.skill:hover {
+    color: rgb(49, 77, 105);
+    cursor: default;
+    transform: scale(1.1)
+}
+
+.skill p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+
+
+/* Certificates  */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.certificate-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.certificate-item img:hover {
+    transform: scale(2.8)
+}
+
+/* Contact me */
+
+.contact-container {
+    background: linear-gradient(90deg, rgb(234, 242, 251) 0%, rgb(193, 204, 221) 100%); 
+    margin-top: 90px;
+    border-radius: 5px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 5px;
+    margin: 0 10px;
+}
+
+.contact-text,
+.contact-form {
+    padding: 40px;
+    flex-basis: 50%;
+}
+
+.contact-text {
+    text-align: left;
+}
+
+.contact-form button {
+    background-color: rgb(76, 57, 87);
+    color: white;
+    align-self: center;
+    cursor: pointer;
+    border: 1px solid rgb(65, 101, 138);
+    border-radius: 5px;
+    width: 442px; /* button (400) + padding (20 + 20) + border (1 + 1) */
+    height: 50px;
+}
+
+.contact-form input, textarea {
+    border: 1px solid rgb(193, 204, 221);
+    font-family: "IBM Plex Sans";
+    border-radius: 5px;
+}
+
+.contact-form input, textarea {
+    width: 400px;
+    padding: 20px;
+}
+
+textarea {
+    min-height: 50px;
+    resize:vertical;
+}
+
+
+.github-link {
+    color: rgb(65, 64, 115);
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+    transform: scale(1.2);
+}
+

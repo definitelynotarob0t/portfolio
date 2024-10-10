@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import AboutMe from '../pages/components/AboutMe';
 import Projects from '../pages/components/Projects';
 import CertificatesLinks from '../pages/components/Certificates';

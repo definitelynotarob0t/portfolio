@@ -1,5 +1,3 @@
-import React from 'react';
-
 type Section = 'about' | 'projects' | 'skills' | 'contact';
 
 interface HeaderProps {

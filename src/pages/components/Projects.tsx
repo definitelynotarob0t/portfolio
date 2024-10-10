@@ -46,10 +46,10 @@ const Projects = () => {
                 <div className="project-row" ref={(el) => { targetRefs.current[0] = el} }>
                     <div className={`project-image ${visibility[0] ? "fade-in" : ""}`} />   
                     <div className={`project-text ${visibility[0] ? "fade-in" : ""}`}>
-                        <h4>Project line of sight mapper</h4>
+                        <h4>Project planning web app</h4>
                         <p>A full-stack application developed for <a href="https://consultingis.com.au/" target="_blank" >Consulting & Implementation Services (CIS)</a>. 
-                        CIS employees use this in client workshops for early-stage program planning, to help clarify projects' lines-of-sight.
-                        It implements user authentication and database hosting.</p>
+                        CIS employees use this in client workshops to ease early-stage project planning, allowing their clients to structure and clarify project logic in a user-friendly way, aided by intuitive prompts and interactive tools.
+                        </p>
                         <div className="project-tools-line">
                           <span className="project-tool-box">Node.js </span>
                           <span className="project-tool-box">React </span>
@@ -67,15 +67,14 @@ const Projects = () => {
                     <Image 
                       src="/images/Dalle-robot-b.webp"
                       alt="Robotic arm extracting data from web pages, surrounded by code"
-                      width={500}
-                      height={500}
+                      width={400}
+                      height={400}
                       className={`project-image ${visibility[1] ? "fade-in" : ""}`}
                     />
                     <div className={`project-text ${visibility[1] ? "fade-in" : ""}`}>
                         <h4>Grant webscrapers</h4>
-                        <p>Developed four webscrapers to scrape three different grant database websites (<a href="https://grantguru.com/au">Grant Guru</a>, <a href="https://www.grants.gov.au/">Grant Connect,</a> and ???) for information on current and upcoming grants. 
-                        These were developed for CIS employees to save time on manual research. Each script was made into executables for ease of use. 
-                        After scripts are executed, the results are saved to a CSV (which can be viewed in Excel).</p>
+                        <p>Four automated webscrapers to scrape three different grant database websites (<a href="https://grantguru.com/au">Grant Guru</a>, <a href="https://www.grants.gov.au/">Grant Connect,</a> and <a href="https://business.gov.au/grants-and-programs?resultsNum=10">business.gov.au</a>) for information on current and upcoming grants. 
+                        After scripts are executed, results are saved to a CSV (which can be viewed in Excel).</p>
                         <div className="project-tools-line">
                           <span className="project-tool-box">Python</span>
                           <span className="project-tool-box">Selenium</span>
@@ -88,7 +87,7 @@ const Projects = () => {
                 <div className="project-row" ref={(el) => {targetRefs.current[2] = el} }>
                     <div className={`project-image ${visibility[2] ? "fade-in" : ""}`} />
                     <div className={`project-text ${visibility[2] ? "fade-in" : ""}`}>
-                        <h4>Portfolio</h4>
+                        <h4>Web portfolio</h4>
                         <p>My portfolio, developed with Next.js, serves as a showcase of my software development journey, featuring the projects I've built and the skills I've acquired. 
                         The goal of this project is not only to present my work but also to demonstrate my ability to design, develop, and deploy a modern web application.</p>
                         <div className="project-tools-line">

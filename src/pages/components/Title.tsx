@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 
 const Title = () => {
     const targetRef = useRef<HTMLDivElement | null>(null);
-    const fullName = "Brianna Spinks"; // The full name
+    const fullName = "Brianna Spinks"; 
     const [displayName, setDisplayName] = useState("B_____________"); // Underscores matching the name length
     const [isVisible, setIsVisible] = useState(false);
 
@@ -44,7 +44,7 @@ const Title = () => {
                 if (currentIndex + 1 >= fullName.length) {
                     clearInterval(typingInterval);
                 }
-            }, 150); 
+            }, 100); 
         }
     }, [isVisible, fullName]);
 

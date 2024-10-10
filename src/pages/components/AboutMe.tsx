@@ -33,24 +33,20 @@ const AboutMe = () => {
 
     return (
         <div  ref={targetRef} className={`about-me-container ${isVisible ? "fade-in" : ""}`}>
-            <div style={{ flexBasis: '50%', border: '2px solid black'}} />
-            <div className="about-me-text">
-                <h2 className="about-me-header" style={{fontSize: '50px'}}> Hello WORLD <br /> </h2>
-                <div className="about-me-header">I'M BRIANNA <p style={{fontSize: '20px', display: 'inline', color: "rgba(65, 64, 115, 0.656)"}}>(she/her)</p></div>
-                <p > I'm a self-taught software developer with experience in full-stack development. </p>
-                <p> 
-                    I graduated with a Bachelor of Arts from the University of Melbourne in 2022, and after trying consulting and working in education, I found my passion in software development. 
-                    I began my self-directed study in 2023 and have been learning ever since. 
-                </p>
-                <p> When I'm not at my computer, I love hiking, camping, reading and running.  </p>               
-                {/* <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <img src="/images/IMG_1442_Original.jpg" width="250"/>
-                    <img src="/images/IMG_3420.jpg" width="250"/>
-                    <img src="/images/IMG_7464.jpg" width="250"/>
-                </div> */}
+            <div style={{ flexBasis: '50%', border: '2px solid black'}} /> 
+            <div className="about-me-text" >
+            <div className="about-me-header">
+                <h1>Hello WORLD <br /></h1>
+                <div >I'M BRIANNA <p style={{fontSize: '20px', display: 'inline', color: "rgba(65, 64, 115, 0.656)"}}>(she/her)</p> </div>
+            </div >
+              <p > I'm a self-taught software developer with experience in full-stack development. </p>
+              <p> 
+                  I graduated with a Bachelor of Arts from the University of Melbourne in 2022, and after trying consulting and working in education, I found my passion in software development. 
+                  I began my self-directed study in 2023 and have been learning ever since. 
+              </p>
+              <p> When I'm not at my computer, I love hiking, camping, reading and running.  </p>               
             </div>
-
-        </div>
+          </div>
     )
 }
 

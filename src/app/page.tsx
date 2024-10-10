@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div>
       <Header scrollToSection={scrollToSection} />
-      <div style={{margin: "50px 180px"}}>
+      <div>
         <Title />
         <div ref={aboutMeRef} style={{scrollMarginTop: '60px'}}><AboutMe /></div>
         <div ref={projectsRef} ><Projects /></div>
@@ -52,7 +52,6 @@ export default function Home() {
         <CertificatesLinks />
         <div ref={contactMeRef} style={{scrollMarginTop: '40px'}}><ContactMe /></div>
       </div>
-      < div style={{height: "60px"}}></div>
     </div>
   );
 }

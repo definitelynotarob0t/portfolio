@@ -59,6 +59,7 @@ const Projects = () => {
                           <span className="project-tool-box">AWS </span>
                         </div>
                         <a href="https://github.com/definitelynotarob0t/cis-los" className="project-github-link"><FaGithub size={20} /></a>
+                        <a href="https://app.consultingis.com.au/login" target="_blank">Live site</a>
                     </div>
                 </div>
 

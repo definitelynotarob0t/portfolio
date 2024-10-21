@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaAws } from 'react-icons/fa';
 import { SiTypescript, SiRedux, SiNextdotjs, SiMongodb, SiPostgresql } from 'react-icons/si';
 
@@ -17,8 +18,35 @@ const skills = [
 ];
 
 const Skills = () => {
+    const targetRef = useRef<HTMLDivElement | null>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const entry = entries[0];
+            // Check if the element is in view
+            setIsVisible(entry.isIntersecting);
+          },
+          {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+          }
+        );
+    
+        if (targetRef.current) {
+          observer.observe(targetRef.current);
+          ;
+        }
+    
+        return () => {
+          if (targetRef.current) {
+            observer.unobserve(targetRef.current);
+          }
+        };
+      }, []);
+
     return (
-        <>
+        <div  ref={targetRef} className={`skills-container ${isVisible ? "fade-in" : ""}`}>
             <h1>My toolkit</h1>
             <div className="skills-grid">
                 {skills.map((skill, index) => (
@@ -28,10 +56,9 @@ const Skills = () => {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     );
 }
 
-// add playwright? 
 
 export default Skills;

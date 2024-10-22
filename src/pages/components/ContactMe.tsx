@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ChangeEvent } from 'react'; 
 import { SyntheticEvent } from 'react';
-import { FaGithub } from 'react-icons/fa';
 import DOMPurify from 'dompurify'; 
 
 const ContactMe = () => {

@@ -1,7 +1,7 @@
 import rateLimit from 'express-rate-limit';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { NextRequestHandler } from 'next/dist/server/next';
 
+// Apply rate limiting middleware
 export const applyRateLimiter = rateLimit({
     windowMs: 60 * 1000, // 1 minute window
     max: 5, // Limit each IP to 5 requests per windowMs
@@ -10,12 +10,14 @@ export const applyRateLimiter = rateLimit({
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 });
 
-export const runMiddleware = (req: NextApiRequest, res: NextApiResponse, next: NextRequestHandler) =>
-    new Promise((resolve, reject) => {
-        next(req, res, (result: unknown) => {
+// Helper to run middleware manually in Next.js
+export const runMiddleware = (req: NextApiRequest, res: NextApiResponse, fn: Function) => {
+    return new Promise((resolve, reject) => {
+        fn(req, res, (result: unknown) => {
             if (result instanceof Error) {
                 return reject(result);
             }
             return resolve(result);
         });
     });
+};

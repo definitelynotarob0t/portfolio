@@ -88,7 +88,6 @@ const ContactMe = () => {
                     If you have any questions, comments, ...job opportunities, or just want to say hello, please feel free to reach out.
                     <br/>Thank you for visiting my page.
                     <br />
-                    <a href="https://github.com/definitelynotarob0t" className="github-link">< FaGithub size={20} /></a>
                 </p>
             </div>
             <div>

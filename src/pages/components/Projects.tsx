@@ -44,11 +44,18 @@ const Projects = () => {
             <div className="projects-columns">
                 {/* Project 1 */}
                 <div className="project-row" ref={(el) => { targetRefs.current[0] = el} }>
-                    <div className={`project-image ${visibility[0] ? "fade-in" : ""}`} />   
+                    <Image
+                      src="/images/screenshot_los_page.png"
+                      alt="Screenshot of the project's line of sight page with example text filled in"
+                      width={450}
+                      height={350}
+                      className={`project-image ${visibility[0] ? "fade-in" : ""}`}
+                      style={{borderTop: '30px rgb(234, 242, 251) solid', borderBottom: '30px rgb(234, 242, 251) solid'}}
+                      />
                     <div className={`project-text ${visibility[0] ? "fade-in" : ""}`}>
                         <h4>Project planning web app</h4>
-                        <p>A full-stack application developed for <a href="https://consultingis.com.au/" target="_blank" >Consulting & Implementation Services (CIS)</a>. 
-                        CIS employees use this in client workshops to ease early-stage project planning, allowing their clients to structure and clarify project logic in a user-friendly way, aided by intuitive prompts and interactive tools.
+                        <p>A full-stack app developed for <a href="https://consultingis.com.au/" target="_blank" >Consulting & Implementation Services</a> to use in client workshops to ease early-stage project planning, aided by intuitive prompts and interactive tools.
+                        See my GitHub repository's README.md for a live demo.
                         </p>
                         <div className="project-tools-line">
                           <span className="project-tool-box">Node.js </span>
@@ -58,8 +65,8 @@ const Projects = () => {
                           <span className="project-tool-box">Typescript </span>
                           <span className="project-tool-box">AWS </span>
                         </div>
-                        <a href="https://github.com/definitelynotarob0t/cis-los" className="project-github-link"><FaGithub size={20} /></a>
-                        <a href="https://app.consultingis.com.au/login" target="_blank">Live site</a>
+                        <a href="https://github.com/definitelynotarob0t/cis-los" target="_blank" className="project-github-link"><FaGithub size={20} /></a>
+                        <a href="https://app.consultingis.com.au/login" target="_blank" style={{fontSize: '14px'}}>Live site</a>
                     </div>
                 </div>
 
@@ -80,13 +87,19 @@ const Projects = () => {
                           <span className="project-tool-box">Python</span>
                           <span className="project-tool-box">Selenium</span>
                         </div>
-                        <a href="https://github.com/definitelynotarob0t/grant-webscrapers" className="project-github-link"><FaGithub size={20} /></a>
+                        <a href="https://github.com/definitelynotarob0t/grant-webscrapers" target="_blank" className="project-github-link"><FaGithub size={20} /></a>
                     </div>
                 </div>
 
                 {/* Project 3 */}
                 <div className="project-row" ref={(el) => {targetRefs.current[2] = el} }>
-                    <div className={`project-image ${visibility[2] ? "fade-in" : ""}`} />
+                    <Image 
+                      src="/images/screenshot_recursive_5.png"
+                      alt="Screnshot of webpage recursively nested inside screenshots of webpage"
+                      width={400}
+                      height={400}
+                      className={`project-image ${visibility[2] ? "fade-in" : ""}`}
+                    />
                     <div className={`project-text ${visibility[2] ? "fade-in" : ""}`}>
                         <h4>Web portfolio</h4>
                         <p>My portfolio, developed with Next.js, serves as a showcase of my software development journey, featuring the projects I've built and the skills I've acquired. 
@@ -96,6 +109,8 @@ const Projects = () => {
                           <span className="project-tool-box">React</span>
                           <span className="project-tool-box">Typescript</span>
                         </div>
+                        <a href="https://github.com/definitelynotarob0t/portfolio" target="_blank" className="project-github-link"><FaGithub size={20} /></a>
+
                     </div>
                 </div>
 

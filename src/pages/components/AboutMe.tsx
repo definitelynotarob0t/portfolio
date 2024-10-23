@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react";
+import Image from 'next/image';
 
 const AboutMe = () => {
     const targetRef = useRef<HTMLDivElement | null>(null);
@@ -33,7 +34,13 @@ const AboutMe = () => {
 
     return (
         <div  ref={targetRef} className={`about-me-container ${isVisible ? "fade-in" : ""}`}>
-            <div style={{ flexBasis: '50%', border: '2px solid black'}} /> 
+            {/* <div style={{ flexBasis: '50%', border: '2px solid black'}} />  */}
+            <Image
+              src="/images/me_hiking.jpg"
+              alt="A photo of me smiling in a valley with a hiking pack on"
+              width={430}
+              height={550}
+              />
             <div className="about-me-text" >
             <div className="about-me-header">
                 <h1>Hello WORLD <br /></h1>

@@ -50,7 +50,7 @@ const Projects = () => {
                       width={450}
                       height={350}
                       className={`project-image ${visibility[0] ? "fade-in" : ""}`}
-                      style={{borderTop: '30px rgb(234, 242, 251) solid', borderBottom: '30px rgb(234, 242, 251) solid'}}
+                      style={{marginTop: '35px', marginBottom: '35px'}}
                       />
                     <div className={`project-text ${visibility[0] ? "fade-in" : ""}`}>
                         <h4>Project planning web app</h4>
